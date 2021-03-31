@@ -1,53 +1,53 @@
 console.log("connected");
 
-const EasyQuestion1 = {
-  questionContent:
-    "What was the name of the non-aggression pact that was signed between Germany and the Soviet Union?",
-  value: 1,
-  choices: [
-    {
-      choiceContent: "Tripartite Pact",
-      correct: false,
-    },
-    {
-      choiceContent: "Agreement of Mutual Assistance",
-      correct: false,
-    },
-    {
-      choiceContent: "Treaty of Versailles",
-      correct: false,
-    },
-    {
-      choiceContent: "Molotov-Ribbentop Pact",
-      correct: true,
-      value: 1,
-    },
-  ],
-};
-const EasyQuestion2 = {
-  questionContent:
-    "What was the name of the non-aggression pact that was signed between Germany and the Soviet Union?",
-  value: 1,
-  choices: [
-    {
-      choiceContent: "Tripartite Pact",
-      correct: false,
-    },
-    {
-      choiceContent: "Agreement of Mutual Assistance",
-      correct: false,
-    },
-    {
-      choiceContent: "Treaty of Versailles",
-      correct: false,
-    },
-    {
-      choiceContent: "Molotov-Ribbentop Pact",
-      correct: true,
-      value: 1,
-    },
-  ],
-};
+// const EasyQuestion1 = {
+//   questionContent:
+//     "What was the name of the non-aggression pact that was signed between Germany and the Soviet Union?",
+//   value: 1,
+//   choices: [
+//     {
+//       choiceContent: "Tripartite Pact",
+//       correct: false,
+//     },
+//     {
+//       choiceContent: "Agreement of Mutual Assistance",
+//       correct: false,
+//     },
+//     {
+//       choiceContent: "Treaty of Versailles",
+//       correct: false,
+//     },
+//     {
+//       choiceContent: "Molotov-Ribbentop Pact",
+//       correct: true,
+//       value: 1,
+//     },
+//   ],
+// };
+// const EasyQuestion2 = {
+//   questionContent:
+//     "What was the name of the non-aggression pact that was signed between Germany and the Soviet Union?",
+//   value: 1,
+//   choices: [
+//     {
+//       choiceContent: "Tripartite Pact",
+//       correct: false,
+//     },
+//     {
+//       choiceContent: "Agreement of Mutual Assistance",
+//       correct: false,
+//     },
+//     {
+//       choiceContent: "Treaty of Versailles",
+//       correct: false,
+//     },
+//     {
+//       choiceContent: "Molotov-Ribbentop Pact",
+//       correct: true,
+//       value: 1,
+//     },
+//   ],
+// };
 
 // Start event or on page load display quiz
 
