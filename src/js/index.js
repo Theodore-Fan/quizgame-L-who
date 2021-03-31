@@ -1,4 +1,4 @@
-console.log(connected);
+console.log("connected");
 
 const EasyQuestion1 = {
   questionContent:
