@@ -1,3 +1,5 @@
+import { questions } from "./questions";
+
 const startButton = document.getElementById("start-btn");
 const nextButton = document.getElementById("next-btn");
 const questionContainerElement = document.getElementById("question-container");
@@ -75,15 +77,3 @@ function clearStatusClass(element) {
   element.classList.remove("correct");
   element.classList.remove("wrong");
 }
-const questions = [
-  {
-    question:
-      "What was the name of the non-aggression pact that was signed between Germany and the Soviet Union?",
-    answers: [
-      { text: "Molotov-Ribbentrop Pact", correct: true },
-      { text: "Agreement of Mutual Assistance", correct: false },
-      { text: "Tripartite Pact", correct: false },
-      { text: "Treaty of Versailles", correct: false },
-    ],
-  },
-];

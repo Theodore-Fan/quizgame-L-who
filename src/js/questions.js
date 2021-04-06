@@ -1,4 +1,4 @@
-const EasyQuestion1 = {
+const questions = {
   questionContent:
     "What was the name of the non-aggression pact that was signed between Germany and the Soviet Union?",
   value: 1,
@@ -20,8 +20,7 @@ const EasyQuestion1 = {
       correct: false,
     },
   ],
-};
-const EasyQuestion2 = {
+
   questionContent: "Which country did Germany invade that started WW2?",
   value: 1,
   choices: [
@@ -42,8 +41,7 @@ const EasyQuestion2 = {
       correct: false,
     },
   ],
-};
-const EasyQuestion3 = {
+
   questionContent:
     "What was the name of the fortified line the French created along the border of Germany prior to WW2?",
   value: 1,
@@ -65,8 +63,7 @@ const EasyQuestion3 = {
       correct: false,
     },
   ],
-};
-const EasyQuestion4 = {
+
   questionContent: "Which general during WW2 was known as the “Desert Fox”?",
   value: 1,
   choices: [
@@ -87,8 +84,7 @@ const EasyQuestion4 = {
       correct: false,
     },
   ],
-};
-const EasyQuestion5 = {
+
   questionContent: "What was the Battle of Britain?",
   value: 1,
   choices: [
@@ -113,8 +109,7 @@ const EasyQuestion5 = {
       correct: true,
     },
   ],
-};
-const EasyQuestion6 = {
+
   questionContent: "Which event caused the United States to join WW2?",
   value: 1,
   choices: [
@@ -135,8 +130,7 @@ const EasyQuestion6 = {
       correct: false,
     },
   ],
-};
-const EasyQuestion7 = {
+
   questionContent:
     "Operation _______  was the codename for the Allied invasion of Normandy in 1944.",
   value: 1,
@@ -158,8 +152,7 @@ const EasyQuestion7 = {
       correct: false,
     },
   ],
-};
-const EasyQuestion8 = {
+
   questionContent:
     "Which battle in the Eastern Front is considered to be one of the most important turning points of the war?",
   value: 1,
@@ -181,8 +174,7 @@ const EasyQuestion8 = {
       correct: false,
     },
   ],
-};
-const EasyQuestion9 = {
+
   questionContent:
     "In which Pacific battle did the famous picture of American soldiers raising a flag come from?",
   value: 1,
@@ -204,8 +196,7 @@ const EasyQuestion9 = {
       correct: false,
     },
   ],
-};
-const EasyQuestion10 = {
+
   questionContent: "Which Allied nation was the first to enter Berlin in 1945?",
   value: 1,
   choices: [
@@ -227,4 +218,5 @@ const EasyQuestion10 = {
     },
   ],
 };
-console.log("connected");
+
+export { questions };
