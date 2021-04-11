@@ -1,7 +1,6 @@
-const EasyQuestion1 = {
+const question = {
   questionContent:
     "What was the name of the non-aggression pact that was signed between Germany and the Soviet Union?",
-  value: 1,
   choices: [
     {
       choiceContent: "Molotov-Ribbentrop Pact",
@@ -21,9 +20,8 @@ const EasyQuestion1 = {
     },
   ],
 };
-const EasyQuestion2 = {
+const question = {
   questionContent: "Which country did Germany invade that started WW2?",
-  value: 1,
   choices: [
     {
       choiceContent: "Denmark",
@@ -43,10 +41,9 @@ const EasyQuestion2 = {
     },
   ],
 };
-const EasyQuestion3 = {
+const question = {
   questionContent:
     "What was the name of the fortified line the French created along the border of Germany prior to WW2?",
-  value: 1,
   choices: [
     {
       choiceContent: "The Maginot Line",
@@ -66,9 +63,8 @@ const EasyQuestion3 = {
     },
   ],
 };
-const EasyQuestion4 = {
+const question = {
   questionContent: "Which general during WW2 was known as the “Desert Fox”?",
-  value: 1,
   choices: [
     {
       choiceContent: "Bernard Montgomery",
@@ -88,9 +84,8 @@ const EasyQuestion4 = {
     },
   ],
 };
-const EasyQuestion5 = {
+const question = {
   questionContent: "What was the Battle of Britain?",
-  value: 1,
   choices: [
     {
       choiceContent:
@@ -114,9 +109,8 @@ const EasyQuestion5 = {
     },
   ],
 };
-const EasyQuestion6 = {
+const question = {
   questionContent: "Which event caused the United States to join WW2?",
-  value: 1,
   choices: [
     {
       choiceContent: "The Japanese invasion of China",
@@ -136,10 +130,9 @@ const EasyQuestion6 = {
     },
   ],
 };
-const EasyQuestion7 = {
+const question = {
   questionContent:
     "Operation _______  was the codename for the Allied invasion of Normandy in 1944.",
-  value: 1,
   choices: [
     {
       choiceContent: "Overlord",
@@ -159,10 +152,9 @@ const EasyQuestion7 = {
     },
   ],
 };
-const EasyQuestion8 = {
+const question = {
   questionContent:
     "Which battle in the Eastern Front is considered to be one of the most important turning points of the war?",
-  value: 1,
   choices: [
     {
       choiceContent: "The Siege of Sevastapol",
@@ -182,10 +174,9 @@ const EasyQuestion8 = {
     },
   ],
 };
-const EasyQuestion9 = {
+const question = {
   questionContent:
     "In which Pacific battle did the famous picture of American soldiers raising a flag come from?",
-  value: 1,
   choices: [
     {
       choiceContent: "Okinawa",
@@ -205,9 +196,8 @@ const EasyQuestion9 = {
     },
   ],
 };
-const EasyQuestion10 = {
+const question = {
   questionContent: "Which Allied nation was the first to enter Berlin in 1945?",
-  value: 1,
   choices: [
     {
       choiceContent: "USSR",
@@ -227,4 +217,3 @@ const EasyQuestion10 = {
     },
   ],
 };
-console.log("connected");
