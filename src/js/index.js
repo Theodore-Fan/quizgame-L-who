@@ -14,6 +14,8 @@ nextButton.addEventListener("click", () => {
   setNextQuestion();
 });
 
+// Start button listens for click, next button listens for click and then adds the question number
+
 function startGame() {
   startButton.classList.add("hide");
   shuffledQuestions = questions.sort(() => Math.random() - 0.5);
@@ -22,10 +24,14 @@ function startGame() {
   setNextQuestion();
 }
 
+// Hides start button, shuffles questions, sets question number to 0, removes question, adds next question
+
 function setNextQuestion() {
   resetState();
   showQuestion(shuffledQuestions[currentQuestionIndex]);
 }
+
+// Shows the next shuffled question
 
 function showQuestion(question) {
   questionElement.innerText = question.question;
@@ -41,6 +47,8 @@ function showQuestion(question) {
   });
 }
 
+// Shows choice buttons that contains text and listens for click
+
 function resetState() {
   clearStatusClass(document.body);
   nextButton.classList.add("hide");
@@ -48,6 +56,8 @@ function resetState() {
     answerButtonsElement.removeChild(answerButtonsElement.firstChild);
   }
 }
+
+//
 
 function selectAnswer(e) {
   const selectedButton = e.target;
@@ -64,6 +74,8 @@ function selectAnswer(e) {
   }
 }
 
+//
+
 function setStatusClass(element, correct) {
   clearStatusClass(element);
   if (correct) {
@@ -73,7 +85,11 @@ function setStatusClass(element, correct) {
   }
 }
 
+//
+
 function clearStatusClass(element) {
   element.classList.remove("correct");
   element.classList.remove("wrong");
 }
+
+//

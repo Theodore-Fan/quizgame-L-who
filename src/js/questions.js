@@ -8,6 +8,7 @@ const questions = [
       { text: "Tripartite Pact", correct: false },
       { text: "Treaty of Versailles", correct: false },
     ],
+
     question:
       "What was the name of the non-aggression pact that was signed between Germany and the Soviet Union?",
     answers: [
@@ -24,6 +25,7 @@ const questions = [
       { text: "Poland", correct: true },
       { text: "France", correct: false },
     ],
+
     question:
       "What was the name of the fortified line the French created along the border of Germany prior to WW2?",
     answers: [
@@ -32,6 +34,7 @@ const questions = [
       { text: "Gustav Line", correct: false },
       { text: "Mareth Line", correct: false },
     ],
+
     question: "Which general during WW2 was known as the “Desert Fox”?",
     answers: [
       { text: "Bernard Montgomery", correct: false },
@@ -39,6 +42,7 @@ const questions = [
       { text: "Giovanni Messe", correct: false },
       { text: "Erich von Manstein", correct: false },
     ],
+
     question: "What was the Battle of Britain?",
     answers: [
       { text: "A naval campaign in the Atlantic Ocean.", correct: false },
@@ -46,6 +50,7 @@ const questions = [
       { text: "An amphibious evacuation at Dunkirk.", correct: false },
       { text: "An aerial campaign over the United Kingdom.", correct: true },
     ],
+
     question: "Which event caused the United States to join WW2?",
     answers: [
       { text: "The Japanese invasion of China", correct: false },
@@ -53,6 +58,7 @@ const questions = [
       { text: "The Japanese attack on Pearl Harbor", correct: true },
       { text: "The fall of Paris to the Germans", correct: false },
     ],
+
     question:
       "What was the codename for the Allied invasion of Normandy in 1944?",
     answers: [
@@ -61,6 +67,7 @@ const questions = [
       { text: "Operation Bagration", correct: false },
       { text: "Operation Market Garden", correct: false },
     ],
+
     question:
       "Which battle in the Eastern Front is considered to be one of the most important turning points of the war?",
     answers: [
@@ -69,6 +76,7 @@ const questions = [
       { text: "The Battle of Smolensk", correct: false },
       { text: "The Siege of Leningrad", correct: false },
     ],
+
     question:
       "In which Pacific battle did the famous picture of American soldiers raising a flag come from?",
     answers: [
@@ -77,6 +85,7 @@ const questions = [
       { text: "Guadalcanal", correct: false },
       { text: "Philippines", correct: false },
     ],
+
     question: "Which Allied nation was the first to enter Berlin in 1945?",
     answers: [
       { text: "USSR", correct: true },
@@ -86,4 +95,5 @@ const questions = [
     ],
   },
 ];
+
 export { questions };
