@@ -2,7 +2,7 @@
   "name": "quizgame-L-who",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html"
