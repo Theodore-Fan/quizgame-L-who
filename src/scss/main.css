@@ -42,7 +42,7 @@ body.wrong {
   --hue: var(--hue-wrong);
 }
 
-.container {
+body .container {
   width: 800px;
   max-width: 80%;
   background-color: white;
@@ -52,7 +52,7 @@ body.wrong {
           box-shadow: 0 0 10px 2px;
 }
 
-.btn-grid {
+body .container #answer-buttons {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (auto)[2];
@@ -61,37 +61,13 @@ body.wrong {
   margin: 20px 0;
 }
 
-.btn {
-  --hue: var(--hue-neutral);
-  border: 1px solid hsl(var(--hue), 100%, 30%);
-  background-color: hsl(var(--hue), 100%, 50%);
-  border-radius: 5px;
-  padding: 5px 10px;
-  color: white;
-  outline: none;
-}
-
-.btn:hover {
-  border-color: black;
-}
-
-.btn.correct {
-  --hue: var(--hue-correct);
-  color: black;
-}
-
-.btn.wrong {
-  --hue: var(--hue-wrong);
-}
-
-.start-btn,
-.next-btn {
-  font-size: 1.5rem;
+body .container #scoreboard {
+  font-size: 2rem;
   font-weight: bold;
-  padding: 10px 20px;
+  padding: 50px 50px;
 }
 
-.controls {
+body .container .controls {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -103,7 +79,38 @@ body.wrong {
           align-items: center;
 }
 
-.hide {
+body .container .controls #start-btn,
+body .container .controls #next-btn {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+body .container .btn {
+  --hue: var(--hue-neutral);
+  border: 1px solid hsl(var(--hue), 100%, 30%);
+  background-color: hsl(var(--hue), 100%, 50%);
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 1rem;
+  color: white;
+  outline: none;
+}
+
+body .container .btn:hover {
+  border-color: black;
+}
+
+body .container .btn.correct {
+  --hue: var(--hue-correct);
+  color: black;
+}
+
+body .container .btn.wrong {
+  --hue: var(--hue-wrong);
+}
+
+body .container .hide {
   display: none;
 }
 /*# sourceMappingURL=main.css.map */
