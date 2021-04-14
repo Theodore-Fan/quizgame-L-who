@@ -8,7 +8,6 @@ const questions = [
       { text: "Tripartite Pact", correct: false },
       { text: "Treaty of Versailles", correct: false },
     ],
-    value: 1,
   },
   {
     question: "Which country did Germany invade that started WW2?",
@@ -18,7 +17,6 @@ const questions = [
       { text: "Poland", correct: true },
       { text: "France", correct: false },
     ],
-    value: 1,
   },
   {
     question:
@@ -29,7 +27,6 @@ const questions = [
       { text: "Gustav Line", correct: false },
       { text: "Mareth Line", correct: false },
     ],
-    value: 1,
   },
   {
     question: "Which general during WW2 was known as the “Desert Fox”?",
@@ -39,7 +36,6 @@ const questions = [
       { text: "Giovanni Messe", correct: false },
       { text: "Erich von Manstein", correct: false },
     ],
-    value: 1,
   },
   {
     question: "What was the Battle of Britain?",
@@ -49,7 +45,6 @@ const questions = [
       { text: "An amphibious evacuation at Dunkirk.", correct: false },
       { text: "An aerial campaign over the United Kingdom.", correct: true },
     ],
-    value: 1,
   },
   {
     question: "Which event caused the United States to join WW2?",
@@ -59,7 +54,6 @@ const questions = [
       { text: "The Japanese attack on Pearl Harbor", correct: true },
       { text: "The fall of Paris to the Germans", correct: false },
     ],
-    value: 1,
   },
   {
     question:
@@ -70,7 +64,6 @@ const questions = [
       { text: "Operation Bagration", correct: false },
       { text: "Operation Market Garden", correct: false },
     ],
-    value: 1,
   },
   {
     question:
@@ -81,7 +74,6 @@ const questions = [
       { text: "The Battle of Smolensk", correct: false },
       { text: "The Siege of Leningrad", correct: false },
     ],
-    value: 1,
   },
   {
     question:
@@ -92,7 +84,6 @@ const questions = [
       { text: "Guadalcanal", correct: false },
       { text: "Philippines", correct: false },
     ],
-    value: 1,
   },
   {
     question: "Which Allied nation was the first to enter Berlin in 1945?",
@@ -102,7 +93,6 @@ const questions = [
       { text: "France", correct: false },
       { text: "United Kingdom", correct: false },
     ],
-    value: 1,
   },
 ];
 

@@ -1,7 +1,8 @@
-import { questions } from "./questions";
+import { questions } from "./questions"; // Importing questions
 
 let quizgame = (function () {
-  let oInstance = {};
+  // IIFE wraps around
+  let oInstance = {}; // defining variables
 
   const startButton = document.getElementById("start-btn");
   const nextButton = document.getElementById("next-btn");
@@ -16,6 +17,7 @@ let quizgame = (function () {
   let correctAnswers = 0;
 
   oInstance.init = function () {
+    // listening for click before initializing quiz
     startButton.addEventListener("click", () => {
       startGame();
     });
@@ -28,14 +30,15 @@ let quizgame = (function () {
 
   let startGame = function () {
     startButton.classList.add("hide");
-    shuffledQuestions = questions.sort(() => Math.random() - 0.5);
-    currentQuestionIndex = 0;
-    correctAnswers = 0;
-    questionContainerElement.classList.remove("hide");
+    shuffledQuestions = questions.sort(() => Math.random() - 0.5); // shuffling questions into random order
+    currentQuestionIndex = 0; // resetting question number
+    correctAnswers = 0; // resetting correct answers
+    questionContainerElement.classList.remove("hide"); // show questions
     setNextQuestion();
   };
 
   let setNextQuestion = function () {
+    // reset the screen and show next question
     resetState();
     showQuestion(shuffledQuestions[currentQuestionIndex]);
   };
@@ -56,19 +59,20 @@ let quizgame = (function () {
 
   let resetState = function () {
     clearStatusClass(document.body);
-    nextButton.classList.add("hide");
-    scoreboard.classList.add("hide");
+    nextButton.classList.add("hide"); //hides next button
+    scoreboard.classList.add("hide"); //hides scoreboard
     while (answerButtonsElement.firstChild) {
       answerButtonsElement.removeChild(answerButtonsElement.firstChild);
     }
   };
 
-  let selectAnswer = function (e) {
-    const selectedButton = e.target;
+  let selectAnswer = function (parameter) {
+    const selectedButton = parameter.target;
     const correct = selectedButton.dataset.correct;
     setStatusClass(document.body, correct);
     scoreboard.classList.remove("hide");
     if (correct) {
+      // if the answer is correct, add 1 to correctAnswers variable
       correctAnswers++;
       scoreboard.innerText = "You are correct!";
     } else {
@@ -107,4 +111,4 @@ let quizgame = (function () {
   return oInstance;
 })();
 
-quizgame.init();
+quizgame.init(); // Initializing quiz only if this is present
