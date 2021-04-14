@@ -1,46 +1,47 @@
 import { questions } from "./questions"; // Importing questions
 
 let quizgame = (function () {
-  // IIFE wraps around
-  let oInstance = {}; // defining variables
+  // IIFE makes all the code function-scoped
+  let oInstance = {};
 
-  const startButton = document.getElementById("start-btn");
-  const nextButton = document.getElementById("next-btn");
+  const startButton = document.getElementById("start-btn"); // connecting start btn variable with html ID tag
+  const nextButton = document.getElementById("next-btn"); // connecting next btn variable with html ID tag
   const questionContainerElement = document.getElementById(
     "question-container"
-  );
-  const questionElement = document.getElementById("question");
-  const answerButtonsElement = document.getElementById("answer-buttons");
+  ); // connecting question container variable with html ID tag
+  const questionElement = document.getElementById("question"); // connecting question variable with html ID tag
+  const answerButtonsElement = document.getElementById("answer-buttons"); // connecting answer buttons variable with html ID tag
 
-  let shuffledQuestions = null;
-  let currentQuestionIndex = 0;
-  let correctAnswers = 0;
+  let shuffledQuestions = null; // defining variable
+  let currentQuestionIndex = 0; // defining variable
+  let correctAnswers = 0; // defining variable
 
   oInstance.init = function () {
-    // listening for click before initializing quiz
+    // listening for click before initializing quiz...
     startButton.addEventListener("click", () => {
+      // when clicking start btn
       startGame();
     });
-
     nextButton.addEventListener("click", () => {
-      currentQuestionIndex++;
-      setNextQuestion();
+      // when clicking next btn
+      currentQuestionIndex++; // increment variable by 1
+      setNextQuestion(); // runs function
     });
   };
 
   let startGame = function () {
-    startButton.classList.add("hide");
+    startButton.classList.add("hide"); // hides start btn
     shuffledQuestions = questions.sort(() => Math.random() - 0.5); // shuffling questions into random order
-    currentQuestionIndex = 0; // resetting question number
-    correctAnswers = 0; // resetting correct answers
+    currentQuestionIndex = 0; // resetting variable for question number to 0
+    correctAnswers = 0; // resetting variable for correct answers to 0
     questionContainerElement.classList.remove("hide"); // show questions
-    setNextQuestion();
+    setNextQuestion(); // runs function
   };
 
   let setNextQuestion = function () {
     // reset the screen and show next question
     resetState();
-    showQuestion(shuffledQuestions[currentQuestionIndex]);
+    showQuestion(shuffledQuestions[currentQuestionIndex]); // shows randomly shuffled question that hasn't been shown yet
   };
 
   let showQuestion = function (question) {
@@ -59,8 +60,8 @@ let quizgame = (function () {
 
   let resetState = function () {
     clearStatusClass(document.body);
-    nextButton.classList.add("hide"); //hides next button
-    scoreboard.classList.add("hide"); //hides scoreboard
+    nextButton.classList.add("hide"); // hides next button
+    scoreboard.classList.add("hide"); // hides scoreboard
     while (answerButtonsElement.firstChild) {
       answerButtonsElement.removeChild(answerButtonsElement.firstChild);
     }
@@ -72,29 +73,31 @@ let quizgame = (function () {
     setStatusClass(document.body, correct);
     scoreboard.classList.remove("hide");
     if (correct) {
-      // if the answer is correct, add 1 to correctAnswers variable
+      // if the answer is correct, add 1 to variable
       correctAnswers++;
-      scoreboard.innerText = "You are correct!";
+      scoreboard.innerText = "You are correct!"; // if correct, show text for being correct
     } else {
-      scoreboard.innerText = "You are wrong!";
+      scoreboard.innerText = "You are wrong!"; // if wrong, show text for being wrong
     }
     Array.from(answerButtonsElement.children).forEach((button) => {
       setStatusClass(button, button.dataset.correct);
     });
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
-      nextButton.classList.remove("hide");
+      // if the total amount of questions is greater than the amount of questions answered (plus 1 because arrays start at 0)
+      nextButton.classList.remove("hide"); // show next btn
     } else {
-      startButton.innerText = "Restart";
-      startButton.classList.remove("hide");
-      scoreboard.innerText =
-        correctAnswers +
-        " out of " +
-        shuffledQuestions.length +
-        " are correct!";
+      startButton.innerText = "Restart"; // change text on start btn to say Restart
+      startButton.classList.remove("hide"); // shows start btn
+      scoreboard.innerText = // final scoreboard text is made up of the following string...
+        correctAnswers + // Total correct answers
+        " out of " + // text
+        shuffledQuestions.length + // Total questions in the quiz
+        " are correct!"; // text
     }
   };
 
   let setStatusClass = function (element, correct) {
+    // when function is run...
     clearStatusClass(element);
     if (correct) {
       element.classList.add("correct");
@@ -104,11 +107,12 @@ let quizgame = (function () {
   };
 
   let clearStatusClass = function (element) {
-    element.classList.remove("correct");
-    element.classList.remove("wrong");
+    // when function is run...
+    element.classList.remove("correct"); // remove correct class
+    element.classList.remove("wrong"); // remove wrong class
   };
 
-  return oInstance;
+  return oInstance; // makes public any objects with oInstance, everything else is private and stays within the function
 })();
 
-quizgame.init(); // Initializing quiz only if this is present
+quizgame.init(); // The quiz starts only when it is initialized here. If it is removed the buttons don't respond.
