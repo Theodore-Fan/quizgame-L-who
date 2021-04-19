@@ -47,31 +47,33 @@ let quizgame = (function () {
   let showQuestion = function (question) {
     questionElement.innerText = question.question;
     question.answers.forEach((answer) => {
-      const button = document.createElement("button");
-      button.innerText = answer.text;
-      button.classList.add("btn");
+      const button = document.createElement("button"); // creates button element
+      button.innerText = answer.text; // shows text for answer choices
+      button.classList.add("btn"); // adds btn class
       if (answer.correct) {
+        // checks if answer choice is correct
         button.dataset.correct = answer.correct;
-      }
-      button.addEventListener("click", selectAnswer);
-      answerButtonsElement.appendChild(button);
+      } // if chosen, that answer will be correct
+      button.addEventListener("click", selectAnswer); // listens for click on an asnwer
+      answerButtonsElement.appendChild(button); // shows questions
     });
   };
 
   let resetState = function () {
-    clearStatusClass(document.body);
+    clearStatusClass(document.body); // resets wrong and right classes to normal
     nextButton.classList.add("hide"); // hides next button
     scoreboard.classList.add("hide"); // hides scoreboard
     while (answerButtonsElement.firstChild) {
-      answerButtonsElement.removeChild(answerButtonsElement.firstChild);
+      // while current questions are being displayed...
+      answerButtonsElement.removeChild(answerButtonsElement.firstChild); // remove stand-in questions
     }
   };
 
   let selectAnswer = function (parameter) {
     const selectedButton = parameter.target;
     const correct = selectedButton.dataset.correct;
-    setStatusClass(document.body, correct);
-    scoreboard.classList.remove("hide");
+    setStatusClass(document.body, correct); // gives the body a class of wrong or correct (depending on the user's answer)
+    scoreboard.classList.remove("hide"); // show scoreboard
     if (correct) {
       // if the answer is correct, add 1 to variable
       correctAnswers++;
@@ -81,7 +83,7 @@ let quizgame = (function () {
     }
     Array.from(answerButtonsElement.children).forEach((button) => {
       setStatusClass(button, button.dataset.correct);
-    });
+    }); // gives each button a class of wrong or correct (depending on the user's answer)
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
       // if the total amount of questions is greater than the amount of questions answered (plus 1 because arrays start at 0)
       nextButton.classList.remove("hide"); // show next btn
@@ -98,18 +100,18 @@ let quizgame = (function () {
 
   let setStatusClass = function (element, correct) {
     // when function is run...
-    clearStatusClass(element);
+    clearStatusClass(element); // clear previous class
     if (correct) {
-      element.classList.add("correct");
+      element.classList.add("correct"); // add class correct
     } else {
-      element.classList.add("wrong");
+      element.classList.add("wrong"); // add class wrong
     }
   };
 
   let clearStatusClass = function (element) {
     // when function is run...
-    element.classList.remove("correct"); // remove correct class
-    element.classList.remove("wrong"); // remove wrong class
+    element.classList.remove("correct"); // remove class correct
+    element.classList.remove("wrong"); // remove class wrong
   };
 
   return oInstance; // makes public any objects with oInstance, everything else is private and stays within the function
