@@ -39,7 +39,7 @@ let quizgame = (function () {
   };
 
   let setNextQuestion = function () {
-    // reset the screen and show next question
+    // rese   t the screen and show next question
     resetState();
     showQuestion(shuffledQuestions[currentQuestionIndex]); // shows randomly shuffled question that hasn't been shown yet
   };
